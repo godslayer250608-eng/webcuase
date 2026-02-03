@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng Dẫn An Toàn</title>
+    <style>
+        {
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }  
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            /* padding: 20px; */
+        }
+        header {
+            background-color: #000;
+            padding: 30px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            color:#eab308;
+            margin-left: 0%;
+            margin-right: 0%;
+        }
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            min-height: 500px;
+        }
+        .tabs-header {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 10px 24px;
+            border: none;
+            background-color: #eee;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            color: #555;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover {
+            background-color: #e0e0e0;
+        }
+        .tab-btn.active {
+            background-color: #f1c40f;
+            color: #000;
+            box-shadow: 0 4px 10px rgba(241, 196, 15, 0.4);
+        }
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .info-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            background-color: #fafafa;
+        }
+
+        .info-card h3 {
+            margin-top: 0;
+            color: #d4ac0d;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-card ul {
+            padding-left: 20px;
+            line-height: 1.8;
+            color: #333;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        .submit-btn {
+            background-color: #f1c40f;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<header>
+      BÁO TƯỜNG AN TOÀN SỐ
+</header>
+    <div class="main-container">
+        <div class="tabs-header">
+            <button class="tab-btn active" onclick="openTab('tab-thoi-quen', this)">THÓI QUEN</button>
+            <button class="tab-btn" onclick="openTab('tab-nguy-co', this)">NGUY CƠ</button>
+            <button class="tab-btn" onclick="openTab('tab-xu-ly', this)">CÁCH XỬ LÍ</button>
+            <button class="tab-btn" onclick="openTab('tab-gop-y', this)">HỘP GÓP Ý</button>
+        </div>
+        <div id="tab-thoi-quen" class="tab-content active">
+            <div class="info-card">
+                <h3>⚠️ Thói quen không an toàn</h3>
+                <ul>
+                    <li>Đăng thông tin cá nhân bừa bãi.</li>
+                    <li>Một mật khẩu cho mọi mặt trận.</li>
+                    <li>Tiện đâu kết nối đó (Wi-Fi miễn phí).</li>
+                    <li>Dùng phần mềm "Bẻ khóa" (Cracked apps).</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>🛡️ Thói quen an toàn</h3>
+                <ul>
+                    <li>Sử dụng xác thực 2 lớp (2FA).</li>
+                    <li>Nguyên tắc "3 giây dừng lại" trước khi click link lạ.</li>
+                    <li>Không tải file lạ về máy.</li>
+                    <li>Kiểm soát thông tin chia sẻ trên mạng xã hội.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div id="tab-nguy-co" class="tab-content">
+            <div class="info-card">
+                <h3>🔥 Nguy cơ tiềm ẩn</h3>
+                <ul>
+                    <li>Mất tài khoản ngân hàng, ví điện tử.</li>
+                    <li>Bị đánh cắp danh tính để lừa đảo người thân.</li>
+                    <li>Máy tính bị nhiễm mã độc tống tiền (Ransomware).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab-xu-ly" class="tab-content">
+            <div class="info-card">
+                <h3>🛠 Cách xử lý khi gặp sự cố</h3>
+                <ul>
+                    <li>Giữ bình tĩnh, ngắt kết nối internet ngay lập tức.</li>
+                    <li>Thay đổi mật khẩu các tài khoản quan trọng khác.</li>
+                    <li>Liên hệ ngân hàng để khóa thẻ nếu liên quan tài chính.</li>
+                    <li>Báo cáo cho cơ quan chức năng hoặc bộ phận IT.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab-gop-y" class="tab-content">
+            <div class="info-card">
+                <h3>💬 Hộp thư góp ý</h3>
+                <div class="form-group">
+                    <input type="text" placeholder="Họ và tên của bạn">
+                    <textarea rows="4" placeholder="Nhập ý kiến đóng góp..."></textarea>
+                    <button class="submit-btn">Gửi góp ý</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            © 2026 | Trang web An Toàn Thông Tin
+        </div>
+
+    </div>
+
+    <script>
+        function openTab(tabId, btnElement) {
+            // 1. Ẩn tất cả các nội dung tab
+            var contents = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].classList.remove('active');
+            }
+
+            // 2. Xóa trạng thái active của tất cả các nút
+            var buttons = document.getElementsByClassName('tab-btn');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('active');
+            }
+
+            // 3. Hiện tab được chọn và tô màu nút bấm
+            document.getElementById(tabId).classList.add('active');
+            btnElement.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
